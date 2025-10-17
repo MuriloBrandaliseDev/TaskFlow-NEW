@@ -107,6 +107,7 @@ export default function AppointmentForm({ isOpen, onClose, selectedDate, onSave,
       attendees: '',
       isRecurring: false,
       recurringPattern: 'weekly',
+      color: '#3b82f6',
     });
     
     onClose();
