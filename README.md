@@ -87,14 +87,22 @@ npm run start
 
 ## 📦 Deploy no Netlify
 
-1. **Conecte seu repositório Git ao Netlify**
-2. **Configure as seguintes configurações de build:**
+### Repositório GitHub
+- **URL**: https://github.com/MuriloBrandaliseDev/TaskFlow-NEW.git
+- **Branch principal**: `master`
+
+### Configuração no Netlify
+1. **Acesse [Netlify](https://netlify.com)**
+2. **Clique em "New site from Git"**
+3. **Conecte com GitHub e selecione o repositório `TaskFlow-NEW`**
+4. **Configure as seguintes configurações de build:**
    - Build command: `npm run build`
    - Publish directory: `out`
    - Node version: `18`
 
-3. **Deploy automático**
-O Netlify fará o deploy automaticamente a cada push para a branch principal.
+5. **Clique em "Deploy site"**
+6. **Deploy automático**
+O Netlify fará o deploy automaticamente a cada push para a branch `master`.
 
 ## 🎯 Como Usar
 
