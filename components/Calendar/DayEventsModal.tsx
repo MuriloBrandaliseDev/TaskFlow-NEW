@@ -152,7 +152,7 @@ export default function DayEventsModal({
                                 <h3 className={`font-medium ${event.isCompleted ? 'line-through text-gray-400' : 'text-white'}`}>
                                   {event.title}
                                 </h3>
-                                {event.type === 'task' && (
+                                {event.type === 'task' && details.priority && (
                                   <span className={`text-xs px-2 py-1 rounded-full bg-gray-600 ${getPriorityColor(details.priority)}`}>
                                     {details.priority === 'high' ? 'Alta' : details.priority === 'medium' ? 'Média' : 'Baixa'}
                                   </span>
@@ -172,7 +172,7 @@ export default function DayEventsModal({
                                   </div>
                                 )}
                                 
-                                {event.type === 'appointment' && details.attendees.length > 0 && (
+                                {event.type === 'appointment' && details.attendees && details.attendees.length > 0 && (
                                   <div className="flex items-center space-x-1">
                                     <Users className="w-3 h-3" />
                                     <span>{details.attendees.length} participante{details.attendees.length !== 1 ? 's' : ''}</span>
@@ -186,7 +186,7 @@ export default function DayEventsModal({
                                 </p>
                               )}
                               
-                              {event.type === 'appointment' && (
+                              {event.type === 'appointment' && details.type && (
                                 <span className={`text-xs px-2 py-1 rounded-full bg-gray-600 ${getAppointmentTypeColor(details.type)}`}>
                                   {details.type === 'meeting' ? 'Reunião' : 
                                    details.type === 'call' ? 'Ligação' :
